@@ -1,83 +1,68 @@
-# Virly VC's Portfolio
+# OOP & Database Project - Cooperative Data Management Application
 
-This is a personal project I made as a surprise for someone's birthday, using her design portfolio and turning it into a website-based portfolio. This project will always be updated when I have new ideas to include, but can already be run as it is right now.
+This is a desktop application project built to fulfill the coursework for Object-Oriented Programming and Databases. The application functions as a management system for various types of data within an institution, such as student, employee, goods, and cooperative transaction data.
+
+---
+# Badge
+![Status](https://img.shields.io/badge/Status-In%20Development-orange)
+![Java](https://img.shields.io/badge/Java-19-blue)
+![JavaFX](https://img.shields.io/badge/JavaFX-20-blueviolet)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-informational)
+![Maven](https://img.shields.io/badge/Build-Maven-critical)
+---
+## 👨‍💻 Team Members
+
+The following group members contributed to this project:
+* C14230180 - David Winata Halim
+* C14230268 - Ryan Eka Tjiumena
+* C14230174 - Daryanto Tanawi
+* C14230150 - David Kristian Susanto
 
 ---
 
-## Badges
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![Laravel](https://img.shields.io/badge/Laravel-12-red)
-![PHP](https://img.shields.io/badge/PHP-8.3-blue)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-38B2AC)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+## 🛠️ Technologies Used
+
+This project was built using the following technologies:
+* **Programming Language:** Java 19
+* **UI Framework:** JavaFX 20
+* **Database:** PostgreSQL
+* **Build Tool:** Apache Maven
+* **Libraries:**
+    * iText (For exporting data to PDF)
+    * Apache POI (For exporting data to Excel)
 
 ---
 
-## Demo
-_Insert gif or link to demo here._
+## 🚀 Key Features
+
+* **Complete Data Management (CRUD):** Add, view, update, and delete data for entities like Students, Employees, Cooperative Staff, Goods, and Departments.
+* **Data Search:** A search feature to easily find specific data.
+* **Export to PDF:** Every data table can be exported into a PDF document.
+* **Cooperative Statistics:** Displays important statistics such as the number of transactions per month and total profit.
 
 ---
 
-## Setup Instructions
-To set up and run this project on your local machine, follow these steps.
+## ⚙️ Installation & Setup Guide
 
-### 1. Clone the repository
-```bash
-git clone <your-repository-url>
-cd <project-folder-name>
-````
+To run this project in your local development environment, follow these steps:
 
-### 2. Install dependencies
+### I. Database Setup
 
-```bash
-# Install PHP dependencies
-composer install
+1.  **Open pgAdmin**: Launch the latest version of pgAdmin.
+2.  **Login to Server**: Log in to your database server.
+3.  **Create a New Database**: Create a new database (e.g., named `projek_pbo`).
+4.  **Execute Query**: Copy and run the SQL query from the `Query Project PBO DB.txt` file to create all the necessary tables and structures.
 
-# Install NodeJS dependencies
-npm install
-```
+### II. Application Configuration
 
-### 3. Environment Setup
+1.  **Open Project**: Open this project using IntelliJ IDEA or another Java IDE.
+2.  **Configure Connection**:
+    * Open the `ConnectionManager.java` file in the `src/main/java/com/example/projekpbobd/util/` directory.
+    * Adjust the database name, username, and password to match your PostgreSQL configuration.
+3.  **Install Fonts (If Needed)**:
+    * If the fonts do not display correctly, open the `src/main/resources/com/example/projekpbobd/fontApp` directory.
+    * Select all font files (`.ttf`), right-click, and choose "Install for all users".
+4.  **Run the Application**:
+    * Find and run the `MainApplication.java` class.
 
-```bash
-# Create a .env file
-cp .env.example .env
-
-# Generate a new application key
-php artisan key:generate
-```
-
-### 4. Run The Application
-
-```bash
-# Start the Laravel server (in one terminal)
-php artisan serve
-
-# Start the Vite server (in another terminal)
-npm run dev
-```
-
-The application will be available at:
-👉 [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
----
-
-## Contributing
-
-Contributions are always welcome!
-Please **fork** the repository and create a **pull request**.
-
----
-
-## Authors
-
-* [@your-github-username](https://github.com/your-github-username)
-
----
-
-## Acknowledgements
-
-* [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
-* [shields.io](https://shields.io)
-
-```
+The application should now run correctly.
