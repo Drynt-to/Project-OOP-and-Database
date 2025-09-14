@@ -1,3 +1,32 @@
+# Sistem Koperasi Berbasis OOP
+
+This is a desktop application project built to fulfill the coursework for Object-Oriented Programming and Databases. The application functions as a management system for various types of data within an institution, such as student, employee, goods, and cooperative transaction data.
+
+---
+
+## 👨‍💻 Team Members
+
+The following group members contributed to this project:
+* C14230180 - David Winata Halim
+* C14230268 - Ryan Eka Tjiumena
+* C14230174 - Daryanto Tanawi
+* C14230150 - David Kristian Susanto
+
+---
+
+## Badges
+![Status](https://img.shields.io/badge/Status-In%20Development-orange)
+![Java](https://img.shields.io/badge/Java-19-blue)
+![JavaFX](https://img.shields.io/badge/JavaFX-20-blueviolet)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-informational)
+![Maven](https://img.shields.io/badge/Build-Maven-critical)
+
+---
+
+## Demo
+_Insert gif or link to demo here._
+
+---
 Memakai Java Versi : 17.0.7
 
 Cara membuat database (Langkah ini perlu dilakukan sebelum menjalankan aplikasi !) :
