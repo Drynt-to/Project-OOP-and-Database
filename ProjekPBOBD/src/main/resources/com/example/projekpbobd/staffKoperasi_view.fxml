@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="frmPane" prefHeight="580.0" prefWidth="1024.0" styleClass="window" stylesheets="@main_view.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekpbobd.controllers.StaffKoperasiController">
+    <children>
+        <BorderPane prefHeight="598.0" prefWidth="1024.0" AnchorPane.bottomAnchor="-18.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox prefHeight="34.0" prefWidth="1024.0" styleClass="welcome-bar" stylesheets="@dataMahasiswa_view.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="back" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="71.0" styleClass="button-back" stylesheets="@dataMahasiswa_view.css">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/tombolBack.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <HBox.margin>
+                                <Insets left="10.0" top="40.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Label styleClass="label-welcome" stylesheets="@dataMahasiswa_view.css" text="Data Staff Koperasi">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="40.0" left="10.0" top="40.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <AnchorPane prefHeight="451.0" prefWidth="1020.0" styleClass="content-data-mahasiswa" stylesheets="@dataMahasiswa_view.css" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </BorderPane.margin>
+                    <children>
+                        <TableView fx:id="tblStaffKoperasi" prefHeight="406.0" prefWidth="633.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="20.0">
+                            <columns>
+                                <TableColumn prefWidth="36.0" text="NO" />
+                                <TableColumn prefWidth="139.20000457763672" text="ID Staff Koperasi" />
+                                <TableColumn prefWidth="195.99996948242188" text="Tanggal Mulai" />
+                                <TableColumn prefWidth="180.00009155273438" text="Tanggal Selesai" />
+                            </columns>
+                        </TableView>
+                        <Button fx:id="delete" layoutX="840.0" layoutY="267.0" mnemonicParsing="false" onAction="#delete" prefHeight="20.0" prefWidth="60.0" styleClass="button-content-data" stylesheets="@main_view.css" text="Delete" AnchorPane.leftAnchor="860.0" AnchorPane.topAnchor="290.0" />
+                        <Button fx:id="update" layoutX="767.0" layoutY="266.0" mnemonicParsing="false" onAction="#update" prefHeight="20.0" prefWidth="40.0" styleClass="button-content-data" stylesheets="@main_view.css" text="Edit" AnchorPane.leftAnchor="810.0" AnchorPane.topAnchor="290.0" />
+                        <Button fx:id="save" layoutX="687.0" layoutY="267.0" mnemonicParsing="false" onAction="#save" prefHeight="20.0" prefWidth="50.0" styleClass="button-content-data" stylesheets="@main_view.css" text="Save" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="290.0" />
+                        <DatePicker fx:id="tglMulai" layoutX="686.0" layoutY="129.0" prefHeight="20.0" prefWidth="130.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="180.0" />
+                        <DatePicker fx:id="tglSelesai" layoutX="686.0" layoutY="203.0" prefHeight="20.0" prefWidth="130.0" AnchorPane.leftAnchor="845.0" AnchorPane.topAnchor="180.0" />
+                        <Label layoutX="686.0" layoutY="186.0" styleClass="text-field-label" stylesheets="@dataMahasiswa_view.css" text="Tanggal Selesai" AnchorPane.leftAnchor="845.0" AnchorPane.topAnchor="160.0" />
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="928.0" layoutY="265.0" onMouseClicked="#export" preserveRatio="true" AnchorPane.leftAnchor="940.0" AnchorPane.topAnchor="283.0">
+                            <image>
+                                <Image url="@images/Export.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="txtIdDepartemen" layoutX="686.0" layoutY="61.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="120.0" />
+                        <Label layoutX="687.0" layoutY="43.0" styleClass="text-field-label" stylesheets="@dataMahasiswa_view.css" text="Id Departemen" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="100.0" />
+                        <Label layoutX="683.0" layoutY="110.0" styleClass="text-field-label" stylesheets="@dataMahasiswa_view.css" text="Tanggal Mulai" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="160.0" />
+                        <Label layoutX="712.0" layoutY="337.0" styleClass="text-field-label" stylesheets="@dataMahasiswa_view.css" text="Lihat Id Departemen Yang Tersedia " AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="380.0" />
+                        <Button fx:id="idDept" layoutX="749.0" layoutY="361.0" mnemonicParsing="false" onAction="#idDepartemen3" prefHeight="20.0" prefWidth="115.0" styleClass="button-content-data" stylesheets="@main_view.css" text="Id Departemen" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="400.0" />
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

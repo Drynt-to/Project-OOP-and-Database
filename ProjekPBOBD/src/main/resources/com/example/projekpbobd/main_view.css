@@ -1,0 +1,79 @@
+/* @font-face {
+  src: url("../projekpbobd/fontApp/Cocogoose-Pro-Regular-trial.ttf");
+} */
+
+/* Bagian keseluruhan anchor pane */
+.window {
+  /* -fx-background-color: #eeeeee; */
+  -fx-background-color: #c0c0c0;
+}
+
+/* Bagian Atas Aplikasi */
+.welcome-bar {
+  -fx-background-color: linear-gradient(to top right, #033c2e, #2c774c);
+}
+
+/* Bagian Footer Aplikasi ketika scroll sampe bawah */
+.footer-bar {
+  -fx-background-color: linear-gradient(to top left, #054d3b, #399b63);
+}
+
+/* Bagian tulisan "Sistem Koperasi Universitas Kristen Betlehem" */
+.label-welcome {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 30px;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 5, 0, 2, 3);
+}
+
+/* Bagian welcoming text "Selamat Datang di Sistem Koperasi kami !" */
+.welcoming-text {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 20px;
+  -fx-text-fill: rgb(0, 0, 0);
+}
+
+/* Bagian deskripsi welcoming text "Silahkan klik tombol "Lihat Data"..." */
+.welcoming-description-text {
+  -fx-font-family: "CocogooseProTrial UltraLight";
+  -fx-font-size: 12px;
+  -fx-text-fill: rgb(0, 0, 0);
+}
+
+/* Bagian kotak-kotak grid pane tiap menu (Data Mahasiswa, Data Pegawai, dll) */
+.content-data {
+  -fx-background-color: white;
+  -fx-background-radius: 20px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 2, 2);
+}
+
+/* Bagian judul tiap menu di dalam kotak-kotak grid pane(Data Mahasiswa, Data Pegawai, dll)*/
+.font-content-data {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 17px;
+}
+
+/* Bagian deskripsi tiap menu di dalam kotak-kotak grid pane(Data Mahasiswa, Data Pegawai, dll)*/
+.font-description-data {
+  -fx-font-family: "CocogooseProTrial Light";
+  -fx-font-size: 12px;
+}
+
+/* Bagian tombol tiap menu (Data Mahasiswa, Data Pegawai, dll) */
+.button-content-data {
+  -fx-background-color: #6aa561;
+  -fx-background-radius: 20px;
+  -fx-font-family: "CocogooseProTrial";
+  -fx-text-fill: white;
+}
+
+/* Bagian tombol tiap menu ketika di hover (Data Mahasiswa, Data Pegawai, dll) */
+.button-content-data:hover {
+  -fx-background-color: transparent;
+  -fx-background-radius: 20px;
+  -fx-border-color: #6aa561;
+  -fx-border-radius: 20px;
+  -fx-cursor: hand;
+  -fx-font-family: "CocogooseProTrial";
+  -fx-text-fill: #107500;
+}

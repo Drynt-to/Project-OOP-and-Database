@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="617.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekpbobd.controllers.MainController">
+   <children>
+      <TableView fx:id="transaksi_view" layoutX="6.0" layoutY="137.0" prefHeight="392.0" prefWidth="613.0">
+        <columns>
+          <TableColumn id="ID Transaksi" fx:id="id_transaksi_main" prefWidth="96.79998397827148" text="ID Transaksi" />
+            <TableColumn fx:id="tanggal_main" prefWidth="90.39996337890625" text="Tanggal" />
+            <TableColumn fx:id="total_jual_main" prefWidth="97.59999084472656" text="Total Jual" />
+            <TableColumn fx:id="profit_main" prefWidth="97.5999755859375" text="Profit" />
+            <TableColumn fx:id="kuantitas_main" prefWidth="118.4000244140625" text="Kuantitas" />
+            <TableColumn fx:id="staff_koperasi_main" prefWidth="111.19997558593752" text="ID Staff Koperasi" />
+        </columns>
+      </TableView>
+      <MenuBar layoutY="21.0" prefHeight="26.0" prefWidth="895.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Data Mahasiswa">
+            <items>
+              <MenuItem fx:id="showMahasiswa" mnemonicParsing="false" onAction="#dataMahasiswa" text="Show" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Data Pegawai">
+            <items>
+                  <MenuItem fx:id="showPegawai" mnemonicParsing="false" onAction="#dataPegawai" text="Show" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Data Barang">
+            <items>
+                  <MenuItem fx:id="showBarang" mnemonicParsing="false" onAction="#dataBarang" text="Show" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Data Staff Koperasi">
+              <items>
+                <MenuItem fx:id="showStaffKoperasi" mnemonicParsing="false" onAction="#dataStaffKoperasi" text="Show All" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Edit" />
+      <Button layoutX="96.0" layoutY="74.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Delete" />
+      <Button layoutX="823.0" layoutY="365.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Save" />
+      <Label layoutX="637.0" layoutY="163.0" text="ID Transaksi" />
+      <TextField layoutX="716.0" layoutY="158.0" prefHeight="26.0" prefWidth="175.0" />
+      <DatePicker layoutX="716.0" layoutY="201.0" />
+      <Label layoutX="637.0" layoutY="205.0" text="Tanggal" />
+      <TextField layoutX="716.0" layoutY="247.0" prefHeight="26.0" prefWidth="175.0" />
+      <TextField layoutX="716.0" layoutY="295.0" prefHeight="26.0" prefWidth="64.0" />
+      <Label layoutX="637.0" layoutY="251.0" text="Total Jual" />
+      <Label layoutX="637.0" layoutY="300.0" text="Kuantitas" />
+      <ImageView fitHeight="47.0" fitWidth="43.0" layoutX="850.0" layoutY="53.0">
+         <image>
+            <Image url="@../../../../../../../../Downloads/724827.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="850.0" layoutY="100.0" text="Export ">
+         <font>
+            <Font name="Bauhaus 93" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

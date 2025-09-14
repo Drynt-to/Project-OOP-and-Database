@@ -1,0 +1,136 @@
+/* @font-face {
+  src: url("../projekpbobd/fontApp/Cocogoose-Pro-Regular-trial.ttf");
+} */
+
+/* Bagian keseluruhan windows (Anchor Pane paling atas) */
+.window {
+  /* -fx-background-color: #eeeeee; */
+  -fx-background-color: #c0c0c0;
+}
+
+/* Bagian background bar atas "Data Mahasiswa" */
+.welcome-bar {
+  -fx-background-color: linear-gradient(to top right, #033c2e, #2c774c);
+}
+
+/* Bagian tulisan bar atas "Data Mahasiswa" */
+.label-welcome {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 30px;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 5, 0, 2, 3);
+}
+
+/* Bagian semua tulisan yang ada di pane (termasuk nama lengkap, id mahasiswa, dll) */
+.content-data-mahasiswa {
+  -fx-background-color: white;
+  -fx-background-radius: 20px;
+}
+
+/* Font untuk keseluruhan konten */
+.font-ingin-bergabung {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 10px;
+}
+
+.font-joinStaff-dulu {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 10px;
+}
+
+/* Judul tiap Text Field */
+.text-field-label {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 10px;
+}
+
+.message-staff-koperasi {
+  -fx-font-family: "CocogooseProTrial Semilight";
+  -fx-font-size: 7px;
+}
+
+.button-content-data {
+  -fx-background-color: #6aa561;
+  -fx-background-radius: 20px;
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 10px;
+  -fx-text-fill: white;
+}
+
+.button-content-data:hover {
+  -fx-background-color: transparent;
+  -fx-background-radius: 20px;
+  -fx-border-color: #6aa561;
+  -fx-border-radius: 20px;
+  -fx-cursor: hand;
+  -fx-font-family: "CocogooseProTrial";
+  -fx-text-fill: #107500;
+}
+
+.button-back {
+  -fx-background-color: transparent;
+}
+
+.button-back:hover {
+  -fx-background-color: invert;
+  -fx-cursor: hand;
+}
+
+.button-join-staff {
+  -fx-background-color: #6aa561;
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 10px;
+  -fx-text-fill: white;
+}
+
+.button-join-staff:hover {
+  -fx-background-color: transparent;
+  -fx-border-color: #6aa561;
+  -fx-cursor: hand;
+  -fx-font-family: "CocogooseProTrial";
+  -fx-text-fill: #107500;
+}
+
+.table-view {
+  /* -fx-border-color: transparent; */
+  /* -fx-background-color: transparent; */
+}
+.table-view .column-header-background,
+.table-view .column-header-background .filler {
+  -fx-background-color: #107500;
+}
+
+.table-view .column-header {
+  -fx-background-color: #107500;
+  -fx-border-color: -fx-grey-color;
+}
+
+.table-view .column-header .label {
+  -fx-font-weight: bold;
+  -fx-alignment: center;
+  -fx-font-family: "CocogooseProTrial Semilight";
+  -fx-font-size: 10px;
+  -fx-text-fill: #ffffff;
+  -fx-text-alignment: center;
+}
+
+.export-text {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 10px;
+}
+
+.cooperative-statistic-title {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 15px;
+}
+
+.search-text-field {
+  -fx-background-radius: 15px;
+}
+
+.search-title-text-field {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 12px;
+}

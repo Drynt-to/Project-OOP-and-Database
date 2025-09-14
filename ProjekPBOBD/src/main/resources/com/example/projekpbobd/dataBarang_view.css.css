@@ -1,0 +1,45 @@
+@font-face {
+  src: url("../projekpbobd/fontApp/Cocogoose-Pro-Regular-trial.ttf");
+}
+
+.window {
+  /* -fx-background-color: #eeeeee; */
+  -fx-background-color: #c0c0c0;
+}
+
+.welcome-bar {
+  -fx-background-color: linear-gradient(to top right, #033c2e, #2c774c);
+}
+
+.label-welcome {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 30px;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 5, 0, 2, 3);
+}
+
+.content-data {
+  -fx-background-color: white;
+  -fx-background-radius: 20px;
+}
+
+.font-content-data {
+  -fx-font-family: "CocogooseProTrial";
+  -fx-font-size: 12px;
+}
+
+.button-content-data {
+  -fx-background-color: #6aa561;
+  -fx-background-radius: 10px;
+  -fx-font-family: "CocogooseProTrial";
+  -fx-text-fill: white;
+}
+
+.button-content-data:hover {
+  -fx-background-color: #6aa561;
+  -fx-opacity: 50%;
+  -fx-background-radius: 10px;
+  -fx-cursor: hand;
+  -fx-font-family: "CocogooseProTrial";
+  -fx-text-fill: white;
+}

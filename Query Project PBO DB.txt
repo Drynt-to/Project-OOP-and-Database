@@ -1,0 +1,145 @@
+-- TAHAP RUN QUERY
+-- 1. Sequence
+-- 2. staff_koperasi
+-- 3. barang
+-- 4. departmen
+-- 5. transaksi
+-- 6. pegawai
+-- 7. mahasiswa
+-- 8. penjualan
+
+
+DROP TABLE IF EXISTS barang, departemen, mahasiswa, pegawai, penjualan, staff_koperasi, transaksi CASCADE;
+
+-- Create sequences for specific starting values
+CREATE SEQUENCE mahasiswa_id_seq START 1;
+CREATE SEQUENCE pegawai_id_seq START 60;
+CREATE SEQUENCE staff_koperasi_id_seq START 100;
+CREATE SEQUENCE barang_id_seq START 151;
+CREATE SEQUENCE departemen_id_seq START 210;
+CREATE SEQUENCE transaksi_id_seq START 1500;
+
+-- Create table: staff_koperasi
+CREATE TABLE IF NOT EXISTS staff_koperasi
+(
+    id_staff_koperasi INTEGER NOT NULL DEFAULT nextval('staff_koperasi_id_seq'),
+    status_aktif INTEGER NOT NULL DEFAULT 1,
+    tanggal_mulai DATE,
+    tanggal_selesai DATE,
+    CONSTRAINT staff_koperasi_pkey PRIMARY KEY (id_staff_koperasi)
+);
+
+ALTER TABLE IF EXISTS staff_koperasi OWNER to postgres;
+
+-- Create table: barang
+CREATE TABLE IF NOT EXISTS barang
+(
+    id_barang INTEGER NOT NULL DEFAULT nextval('barang_id_seq'),
+    nama_barang VARCHAR(100) COLLATE pg_catalog."default",
+    harga_pokok NUMERIC(10,2),
+    harga_jual NUMERIC(10,2),
+    kategori VARCHAR(50) COLLATE pg_catalog."default",
+    status_aktif INTEGER NOT NULL DEFAULT 1,
+	profit_margin NUMERIC(5,2) DEFAULT 0.00,
+    CONSTRAINT barang_pkey PRIMARY KEY (id_barang)
+);
+
+ALTER TABLE IF EXISTS barang OWNER to postgres;
+
+-- Create table: departemen
+CREATE TABLE IF NOT EXISTS departemen
+(
+    id_departemen INTEGER NOT NULL DEFAULT nextval('departemen_id_seq'),
+    nama_departemen VARCHAR(60) COLLATE pg_catalog."default",
+    kepala_departemen INTEGER,
+    role VARCHAR(50) COLLATE pg_catalog."default",
+    CONSTRAINT departemen_pkey PRIMARY KEY (id_departemen),
+    CONSTRAINT departemen_kepala_departemen_fkey FOREIGN KEY (kepala_departemen)
+        REFERENCES staff_koperasi (id_staff_koperasi) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);
+
+ALTER TABLE IF EXISTS departemen OWNER to postgres;
+
+-- Create table: mahasiswa
+CREATE TABLE IF NOT EXISTS mahasiswa
+(
+    id_mahasiswa INTEGER NOT NULL DEFAULT nextval('mahasiswa_id_seq'),
+    nama_depan_mahasiswa VARCHAR(30) COLLATE pg_catalog."default",
+    nama_belakang_mahasiswa VARCHAR(30) COLLATE pg_catalog."default",
+    no_telepon VARCHAR(20) COLLATE pg_catalog."default",
+    status_aktif INTEGER NOT NULL DEFAULT 1,
+    id_staff_koperasi INTEGER,
+    CONSTRAINT mahasiswa_pkey PRIMARY KEY (id_mahasiswa),
+    CONSTRAINT mahasiswa_id_staff_koperasi_fkey FOREIGN KEY (id_staff_koperasi)
+        REFERENCES staff_koperasi (id_staff_koperasi) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);
+
+ALTER TABLE IF EXISTS mahasiswa OWNER to postgres;
+
+-- Create table: pegawai
+CREATE TABLE IF NOT EXISTS pegawai
+(
+    id_pegawai INTEGER NOT NULL DEFAULT nextval('pegawai_id_seq'),
+    nama_depan_pegawai VARCHAR(30) COLLATE pg_catalog."default",
+    nama_belakang_pegawai VARCHAR(30) COLLATE pg_catalog."default",
+    no_telepon VARCHAR(20) COLLATE pg_catalog."default",
+    status_aktif INTEGER NOT NULL DEFAULT 1,
+    id_staff_koperasi INTEGER,
+    CONSTRAINT pegawai_pkey PRIMARY KEY (id_pegawai),
+    CONSTRAINT pegawai_id_staff_koperasi_fkey FOREIGN KEY (id_staff_koperasi)
+        REFERENCES staff_koperasi (id_staff_koperasi) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);
+
+ALTER TABLE IF EXISTS pegawai OWNER to postgres;
+
+-- Create table: penjualan
+CREATE TABLE IF NOT EXISTS penjualan
+(
+    id_penjualan INTEGER NOT NULL,
+    id_transaksi INTEGER,
+    id_barang INTEGER,
+    CONSTRAINT penjualan_pkey PRIMARY KEY (id_penjualan),
+    CONSTRAINT penjualan_id_barang_fkey FOREIGN KEY (id_barang)
+        REFERENCES barang (id_barang) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT penjualan_id_transaksi_fkey FOREIGN KEY (id_transaksi)
+        REFERENCES transaksi (id_transaksi) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);
+
+ALTER TABLE IF EXISTS penjualan OWNER to postgres;
+
+-- Create table: transaksi
+CREATE TABLE IF NOT EXISTS transaksi
+(
+    id_transaksi INTEGER NOT NULL DEFAULT nextval('transaksi_id_seq'),
+    tanggal_transaksi DATE,
+    total_jual NUMERIC(10,2),
+    profit NUMERIC(10,2),
+    kuantitas INTEGER,
+    id_staff_koperasi INTEGER,
+    CONSTRAINT transaksi_pkey PRIMARY KEY (id_transaksi),
+    CONSTRAINT fk_id_staff_koperasi FOREIGN KEY (id_staff_koperasi)
+        REFERENCES staff_koperasi (id_staff_koperasi) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);
+
+ALTER TABLE IF EXISTS transaksi OWNER to postgres;
+
+
+ALTER TABLE departemen
+ADD COLUMN status_aktif INTEGER NOT NULL DEFAULT 1;
+
+ALTER TABLE transaksi
+ADD COLUMN id_barang INT, 
+ADD CONSTRAINT fk_transaksi_barang
+FOREIGN KEY (id_barang) REFERENCES barang(id_barang);
