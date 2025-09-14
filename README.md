@@ -4,7 +4,6 @@ This is a desktop application project built to fulfill the coursework for Object
 
 ---
 # Badge
-![Status](https://img.shields.io/badge/Status-In%20Development-orange)
 ![Java](https://img.shields.io/badge/Java-19-blue)
 ![JavaFX](https://img.shields.io/badge/JavaFX-20-blueviolet)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-informational)
