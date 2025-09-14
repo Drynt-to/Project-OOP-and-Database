@@ -1,25 +1,15 @@
-# Sistem Koperasi Berbasis OOP
+# Virly VC's Portfolio
 
-This is a desktop application project built to fulfill the coursework for Object-Oriented Programming and Databases. The application functions as a management system for various types of data within an institution, such as student, employee, goods, and cooperative transaction data.
-
----
-
-## 👨‍💻 Team Members
-
-The following group members contributed to this project:
-* C14230180 - David Winata Halim
-* C14230268 - Ryan Eka Tjiumena
-* C14230174 - Daryanto Tanawi
-* C14230150 - David Kristian Susanto
+This is a personal project I made as a surprise for someone's birthday, using her design portfolio and turning it into a website-based portfolio. This project will always be updated when I have new ideas to include, but can already be run as it is right now.
 
 ---
 
 ## Badges
-![Status](https://img.shields.io/badge/Status-In%20Development-orange)
-![Java](https://img.shields.io/badge/Java-19-blue)
-![JavaFX](https://img.shields.io/badge/JavaFX-20-blueviolet)
-![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-informational)
-![Maven](https://img.shields.io/badge/Build-Maven-critical)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Laravel](https://img.shields.io/badge/Laravel-12-red)
+![PHP](https://img.shields.io/badge/PHP-8.3-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-38B2AC)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 
@@ -27,31 +17,67 @@ The following group members contributed to this project:
 _Insert gif or link to demo here._
 
 ---
-Memakai Java Versi : 17.0.7
 
-Cara membuat database (Langkah ini perlu dilakukan sebelum menjalankan aplikasi !) :
-1. Pertama, buka pgAdmin versi terbaru
-2. Login server sesuai password yang sudah diatur sebelumnya
-3. Buat Database baru lalu salin query-query yang sudah disediakan
-4. Salin dan tempel query secara bertahap (*ikuti tahapan-tahapan yang ada di bagian atas)
-5. Run query yang sudah di salin dan tempel secara bertahap per bagian
+## Setup Instructions
+To set up and run this project on your local machine, follow these steps.
 
+### 1. Clone the repository
+```bash
+git clone <your-repository-url>
+cd <project-folder-name>
+````
 
-Cara menjalankan program :
-1. Pertama koneksikan aplikasi ke database dengan memasukkan nama database dan passwordnya di bagian class "ConnectionManager"
-2. Cari class "MainApplication", lalu run programnya (*Jika mengalami error di "ConnectionManager" ganti url nya sesuai dengan nama database dan password anda")
-3. Setelah melihat tampilan awal, kita bisa melihat opsi-opsi data yang tersedia untuk di lihat
-4. Misalkan kita memilih data mahasiswa, kita bisa melihat tabel data mahasiswa, dan kita juga bisa melakukan search data, penambahan data, edit data, delete data dan exsport data dalam bentuk pdf. Hal ini juga sama dilakukan di bagian data pegawai
-5. Pada bagian data staff koperasi, data barang, departemen, dan transaksi, caranya tidak begitu berbeda dengan data mahasiswa
-6. Pada bagian statistik koperasi kita bisa melihat fitur-fitur yang ada didalam koperasi. Misal salah satunya adalah jumlah transaksi yang dilakukan per bulan
+### 2. Install dependencies
 
+```bash
+# Install PHP dependencies
+composer install
 
+# Install NodeJS dependencies
+npm install
+```
 
-===PERHATIAN : JIKA FONT TIDAK TERBACA, MOHON INSTALL TERLEBIH DAHULU !===
+### 3. Environment Setup
 
-CARA INSTAL FONT
-1. Buka direktori file "C:/Users/(Profil_Anda)/Downloads/ProjekPBOBD/src/main/resources/com/example/projekpbobd/fontApp"
-2. Block semua font yang ada
-3. Klik kanan, lalu pilih "Show More Options"(Windows 11)
-4. Klik "Install for all users" dan tunggu proses nya hingga selesai
+```bash
+# Create a .env file
+cp .env.example .env
 
+# Generate a new application key
+php artisan key:generate
+```
+
+### 4. Run The Application
+
+```bash
+# Start the Laravel server (in one terminal)
+php artisan serve
+
+# Start the Vite server (in another terminal)
+npm run dev
+```
+
+The application will be available at:
+👉 [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+
+## Contributing
+
+Contributions are always welcome!
+Please **fork** the repository and create a **pull request**.
+
+---
+
+## Authors
+
+* [@your-github-username](https://github.com/your-github-username)
+
+---
+
+## Acknowledgements
+
+* [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+* [shields.io](https://shields.io)
+
+```
