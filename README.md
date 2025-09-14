@@ -20,6 +20,11 @@ The following group members contributed to this project:
 
 ---
 
+## Demo
+![Koperasi](https://github.com/user-attachments/assets/28615e2e-2fcc-471a-a79b-98c22e2f8d54)
+
+---
+
 ## 🛠️ Technologies Used
 
 This project was built using the following technologies:
